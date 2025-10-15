@@ -34,7 +34,7 @@ function update_script() {
     msg_ok "Stopped Service"
 
     rm -f /usr/local/bin/zitadel
-    fetch_and_deploy_gh_release "zitadel" "zitadel/zitadel" "prebuild" "4.3.1" "/usr/local/bin" "zitadel-linux-amd64.tar.gz"
+    fetch_and_deploy_gh_release "zitadel" "zitadel/zitadel" "prebuild" "v4.3.1" "/usr/local/bin" "zitadel-linux-amd64.tar.gz"
 
     msg_info "Updating $APP"
     $STD zitadel setup --masterkeyFile /opt/zitadel/.masterkey --config /opt/zitadel/config.yaml --init-projections=true
